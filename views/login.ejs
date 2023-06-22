@@ -1,0 +1,224 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Punch Time Form</title>
+  <!-- Add Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"> </script>  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"> </script>    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"> </script>   
+
+
+
+  
+  <!-- <link href="../js/script.css"  rel="stylesheet"> -->
+
+  <style>
+	.container{width: 588px;border: 2px solid black; padding: 5px;margin-top: 100px;}
+	h1{text-align: center;margin-top: 15px;}
+	 .navbar {
+		background-color: turquoise;}
+	
+  </style>
+  
+</head>
+
+<body>
+
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+		<a class="navbar-brand" href="/login">Home</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+		  <ul class="navbar-nav ml-auto flex-column flex-md-row">
+			<!-- <li class="nav-item">
+			  <a class="nav-link" href="/login/view">Import</a>
+			</li> -->
+			<li class="nav-item">
+			  <a class="nav-link" href="/login/excel-view">View</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="/login/excel-import">Excel</a>
+			</li> 
+		  </ul>
+		</div>
+	  </nav>
+	  
+	  
+	  
+
+	<div class="container">
+		<h1>Punch Time Form</h1>
+		<form action="/login/submit" method="POST">
+		  <div class="row">
+			<div class="col-md">
+			  <div class="form-group">
+				<label for="employeeCode">Employee Code:</label>
+				<input type="text" id="employeeCode" name="employeeCode"  class="form-control" required>
+			  </div>
+			</div>
+		  </div>
+		  <div class="row">
+			<div class="col-md">
+			  <div class="form-group">
+				<label for="employeeName">Employee Name:</label>
+				<input type="text" id="employeeName" name="employeeName" class="form-control" required>
+			  </div>
+			</div>
+		  </div>
+	  
+		  <div class="row">
+			<div class="col-md">
+			  <div class="form-group">
+				<label for="date">Date:</label>
+				<input type="text" id="date" name="date" class="date form-control" data-date-format="yyyy-mm-dd" required>
+
+				<!-- <input class="date form-control" style="width: 250px;" type="text">   -->
+
+				
+			  </div>
+			</div>
+			<div class="col-md">
+			  <div class="form-group">
+				<label for="inTime">In Time:</label>
+				<input type="time" id="inTime" name="inTime" class="form-control" required>
+			  </div>
+			</div>
+			<div class="col-md">
+			  <div class="form-group">
+				<label for="outTime">Out Time:</label>
+				<input type="time" id="outTime" name="outTime" class="form-control" required>
+			  </div>
+			</div>
+		  </div>
+		<div class="row">
+			<div class="col-md">
+				<div class="form-group">
+				  <label for="shift">Shift:</label>
+				  <input type="text" id="shift" name="shift" class="form-control" required>
+				</div>
+			  </div>
+			<div class="col-md">
+				<div class="form-group">
+				  <label for="date">S.Intime :</label>
+				  <input type="time" id="sinTime" name="sinTime" class="form-control" required>
+				</div>
+			  </div>
+			  <div class="col-md">
+				<div class="form-group">
+				  <label for="inTime">S.Outtime:</label>
+				  <input type="time" id="souTime" name="souTime" class="form-control" required>
+				</div>
+			  </div>
+		  </div>
+
+
+		  <div class="row">
+			<div class="col-md">
+				<div class="form-group">
+					<label for="workDuration">Work Duration:</label>
+					<input type="time" id="workDuration" name="workDuration" class="form-control" required>
+				</div>
+			  </div>
+			<div class="col-md">
+				<div class="form-group">
+					<label for="OT">OT:</label>
+					<input type="time" id="ot" name="ot" class="form-control" required>
+				</div>
+			  </div>
+			  <div class="col-md">
+				<div class="form-group">
+					<label for="totalDuration">Total Duration:</label>
+					<input type="time" id="totalDuration" name="totalDuration" class="form-control" required>
+				</div>
+			  </div>
+		  </div>
+		  <div class="row">
+			<div class="col-md">
+				<div class="form-group">
+					<label for="lateBy">Late By:</label>
+				<input type="time" id="lateBy" name="lateBy" class="form-control" required>
+				</div>
+			  </div>
+			<div class="col-md">
+				<div class="form-group">
+					<label for="earlyGoing">Early Going By:</label>
+				<input type="time" id="earlyGoing" name="earlyGoing" class="form-control" required>
+				</div>
+			  </div>
+			  <div class="col-md">
+				<div class="form-group">
+				  <label for="status">Status:</label>
+				  <select id="status_s" name="status_s" class="form-control" required>
+					<option value="Present">Present</option>
+					<option value="Absent">Absent</option>
+					<option value="1/2 Present">1/2 Present</option>
+				  </select>
+				</div>
+			  </div>
+			  
+		  </div>
+		  <div class="row">
+			<div class="col-md">
+			  <div class="form-group">
+				<label for="punchRecords">Punch Records:</label>
+				<input type="text" id="punchRecords" name="punchRecords" class="form-control" required>
+			  </div>
+			</div>
+		  </div>
+	  
+		  <!-- More input fields here -->
+	  
+		  <div class="form-group text-center">
+			<input type="submit" value="Submit" class="btn btn-primary">
+			<!-- <a href="/login/view" ><button type="button" class="btn btn-primary" >Import</button></a>
+			<a href="/login/excel-view" ><button type="button" class="btn btn-primary" >View</button></a><br><br>
+			<a href="/login/excel-import" ><button type="button" class="btn btn-primary" >Import II</button></a> -->
+		  </div>
+
+		  
+
+
+
+
+		</form>
+	  </div> 
+	  </body>
+	  
+	  
+	  <!-- Add Bootstrap JS -->
+	  
+	  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	  <script type="text/javascript">  
+		$('.date').datepicker({  
+		   format: 'yyyy/mm/dd'  
+		 });  
+	</script>   
+
+
+<!-- <script type="text/javascript">
+    function openImportPopup() {
+      const importPopup = document.getElementById("importPopup");
+      importPopup.style.display = "block";
+    }
+
+    function closeImportPopup() {
+      const importPopup = document.getElementById("importPopup");
+      importPopup.style.display = "none";
+    }
+  </script> -->
+	
+	  
+
+	  

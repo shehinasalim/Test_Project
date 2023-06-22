@@ -1,0 +1,117 @@
+<!-- <h1>hi</h1> -->
+
+
+
+
+<!-- upload.ejs -->
+
+<!DOCTYPE html>
+<html>
+<head>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"> </script>  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"> </script>    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"> </script>   
+
+
+  <title>Data Table</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: center;
+    }
+    h1{text-align: center}  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+		<!-- <a class="navbar-brand" href="#"></a> -->
+		<a class="navbar-brand" href="/login">Home</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+		  <ul class="navbar-nav ml-auto">
+			<!-- <li class="nav-item">
+			  <a class="nav-link" href="/login/view">Import</a>
+			</li> -->
+			<li class="nav-item">
+			  <a class="nav-link" href="/login/excel-view">View</a>
+			</li>
+			 <li class="nav-item">
+			  <a class="nav-link" href="/login/excel-import">Excel</a>
+			</li> 
+		  </ul>
+		</div>
+	  </nav>
+
+
+
+
+
+
+
+
+
+  <h1>Data Table</h1>
+  <table>
+    <thead>
+    <tr>
+      <td><%= empCode %></td>
+    <td><%= empName %></td>
+    </tr>
+  </thead>
+  </table>
+  
+  <table>
+    <thead>
+      <tr>
+        <!-- <th>Emp Code</th>
+        <th>Employee Name</th> -->
+        <th>Att. Date</th>
+        <th>InTime</th>
+        <th>OutTime</th>
+        <th>Shift</th>
+        <th>S. InTime</th>
+        <th>S. OutTime</th>
+        <th>Work Dur.</th>
+        <th>OT</th>
+        <th>Tot. Dur.</th>
+        <th>LateBy</th>
+        <th>EarlyGoingBy</th>
+        <th>Status</th>
+        <!-- <th>Punch Records</th> -->
+        <th>workDuration</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for (let i = 0; i < data.length; i++) { %>
+        <tr>
+          <!-- <td><%= data[i]['Emp Code'] %></td>
+          <td><%= data[i]['Employee Name'] %></td> -->
+            <td><%= data[i]['Att. Date'] %></td>
+            <td><%= data[i]['InTime'] %></td>
+            <td><%= data[i]['OutTime'] %></td>
+            <td><%= data[i]['Shift'] %></td>
+            <td><%= data[i]['S. InTime'] %></td>
+            <td><%= data[i]['S. OutTime'] %></td>
+            <td><%= data[i]['Work Dur.'] %></td>
+            <td><%= data[i]['OT'] %></td>
+            <td><%= data[i]['Tot. Dur.'] %></td>
+            <td><%= data[i]['LateBy'] %></td>
+            <td><%= data[i]['EarlyGoingBy'] %></td>
+            <td><%= data[i]['Status'] %></td>
+            <td><%= data[i]['workDuration'] %></td>  
+        </tr>
+      <% } %>
+    </tbody>
+  </table>
+</body>
+</html>

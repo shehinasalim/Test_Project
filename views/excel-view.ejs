@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Punch Time Form</title>
+  <!-- Add Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"> </script>  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"> </script>    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"> </script> 
+  <style>
+	.container{width: 588px;
+    border: 2px solid black;
+    padding: 93px;
+    margin-top: 100px;}
+    h1{text-align: center;margin-top: 15px;}
+	
+  </style>
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+		<!-- <a class="navbar-brand" href="#"></a> -->
+		<a class="navbar-brand" href="/login">Home</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+		  <ul class="navbar-nav ml-auto">
+			<!-- <li class="nav-item">
+			  <a class="nav-link" href="/login/view">Import</a>
+			</li> -->
+			<li class="nav-item">
+			  <a class="nav-link" href="/login/excel-view">View</a>
+			</li>
+			<!-- <li class="nav-item">
+			  <a class="nav-link" href="/login/excel-import">Import II</a>
+			</li> -->
+			<li class="nav-item">
+				<a class="nav-link" href="/login/excel-import">Excel</a>
+			  </li> 
+		  </ul>
+		</div>
+	  </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div class="container">
+		<h1></h1>
+		<form action="/login/view-excel-view" method="POST" >
+		  <div class="row">
+			<div class="col-md">
+			  <div class="form-group">
+				<label for="employeeCode">Employee Code:</label>
+				<input type="text" id="id" name="id"  class="form-control" required>
+			  </div>
+			 
+			  
+			  
+			  
+			  
+			  
+			  
+
+
+
+
+			</div>
+		  </div>
+		  <div class="row">
+			<div class="col-md">
+                <div class="form-group">
+                  <label for="date">Date:</label>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md">
+    <div class="form-group">
+                  <label for="date">From</label>
+                  <!-- <input type="text" id="startDate" name="startDate" class="date form-control" data-date-format="yyyy-mm-dd" required> -->
+                  <input type="date" id="startDate" name="startDate" class="form-control" required>
+
+                  </div>
+                  </div>
+                  <div class="col-md">
+                    <div class="form-group">
+                <label for="date">To</label>
+                <input type="date" id="endDate" name="endDate" class="form-control" required>
+                <!-- <input type="text" id="endDate" name="endDate" class="date form-control" data-date-format="yyyy-mm-dd" required> -->
+                  <!-- <input class="date form-control" style="width: 250px;" type="text"> -->
+                </div>
+              </div>
+		  </div>
+          <div class="form-group text-center">
+            <button type="submit">Submit</button><br><br>
+            <!-- <a href="/login" ><button type="button" class="btn btn-primary" ><<</button></a> -->
+
+			<!-- <a href="/login/view-excel-view" ><button type="button" class="btn btn-primary" >View</button></a> -->
+		  </div>
+		</form>
+	  </div> 
+	  </body>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	  <script type="text/javascript">  
+		$('.date').datepicker({  
+		   format: 'yyyy/mm/dd'  
+		 });  
+	</script>  
+</html>
